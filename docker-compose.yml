@@ -18,6 +18,8 @@ services:
       MYSQL_ROOT_PASSWORD: 'admin'
     ports:
       -  3305:3306
+    security_opt:
+      - seccomp:unconfined
     volumes:
       - hapi-fhir-mysql:/var/lib/mysql
 volumes:
